@@ -61,11 +61,11 @@ jobs:
           draft: false
           prerelease: false
       - name: Download Artifacts
-        uses: actions/download-artifacts@v2
+        uses: actions/download-artifact@v2
         with:
           name: zipped-bundle
       - name: upload release assets
-        uses: actions/upload-release@v1
+        uses: actions/upload-release-asset@v1
         env:
            GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
